@@ -23,12 +23,12 @@ namespace UFESManager.Services
         // Retorna todos os departamentos
         public async Task<List<Department>> GetAllDepartmentsAsync()
         {
-            return await _context.Departments.OrderBy(d => d.DepartmentId).ToListAsync();
+            return await _context.Department.OrderBy(d => d.DepartmentId).ToListAsync();
         }
 
         public List<Department> GetAllDepartments()
         {
-            return _context.Departments.OrderBy(d => d.DepartmentId).ToList();
+            return _context.Department.OrderBy(d => d.DepartmentId).ToList();
         }
     }
 }

@@ -22,8 +22,8 @@
             //  to avoid creating duplicate seed data.
 
             // Verificar se já existe algum dado nas tabelas
-            if (context.Departments.Any() || context.Courses.Any() ||
-                context.Students.Any() || context.Subjects.Any()) { return; }
+            if (context.Department.Any() || context.Course.Any() ||
+                context.Student.Any() || context.Subject.Any()) { return; }
 
             //===== Povoar as tabelas
             //= Departamentos
@@ -109,17 +109,17 @@
             //=== Estudantes
             IList<Student> students = new List<Student>();
 
-            Student s1 = new Student(1, "Luís", "luis@gmail.com", 90294817, c13);
-            Student s2 = new Student(2, "Israel", "junior@gmail.com", 59798982, c13);
-            Student s3 = new Student(3, "Marcos", "marcos@gmail.com", 99713453, c1);
-            Student s4 = new Student(4, "Fábio", "fabio@gmail.com", 17153405, c2);
-            Student s5 = new Student(5, "Júlia", "julia@gmail.com", 73563464, c3);
-            Student s6 = new Student(6, "Amanda", "amanda@gmail.com", 15647231, c4);
-            Student s7 = new Student(7, "Letícia", "leticia@gmail.com", 20316827, c5);
-            Student s8 = new Student(8, "Thaina", "thaina@gmail.com", 88880916, c8);
-            Student s9 = new Student(9, "Flávia", "flavia@gmail.com", 21956699, c9);
-            Student s10 = new Student(10, "Rodrigo", "rodrigo@gmail.com", 89340993, c11);
-            Student s11 = new Student(11, "Lucca", "lucca@gmail.com", 22840620, c12);
+            Student s1 = new Student(201812020, "Luís", "luis@gmail.com", 90294817, c13);
+            Student s2 = new Student(201912020, "Israel", "junior@gmail.com", 59798982, c13);
+            Student s3 = new Student(201117020, "Marcos", "marcos@gmail.com", 99713453, c1);
+            Student s4 = new Student(201815021, "Fábio", "fabio@gmail.com", 17153405, c2);
+            Student s5 = new Student(201812031, "Júlia", "julia@gmail.com", 73563464, c3);
+            Student s6 = new Student(201815041, "Amanda", "amanda@gmail.com", 15647231, c4);
+            Student s7 = new Student(201812054, "Letícia", "leticia@gmail.com", 20316827, c5);
+            Student s8 = new Student(201811064, "Thaina", "thaina@gmail.com", 88880916, c8);
+            Student s9 = new Student(201721074, "Flávia", "flavia@gmail.com", 21956699, c9);
+            Student s10 = new Student(201502020, "Rodrigo", "rodrigo@gmail.com", 89340993, c11);
+            Student s11 = new Student(1, "Lucca", "lucca@gmail.com", 22840620, c12);
 
             //= Adicionar
             List<Subject> student1Subjects = new List<Subject>() { sb1, sb2, sb6 };
@@ -138,16 +138,16 @@
 
             //=== Adicionar ao banco de dados
             // Tabela de departamentos
-            context.Departments.AddRange(departments);
+            context.Department.AddRange(departments);
 
             // Tabela de cursos
-            context.Courses.AddRange(courses);
+            context.Course.AddRange(courses);
 
             // Tabela de estudantes
-            context.Students.AddRange(students);
+            context.Student.AddRange(students);
 
             // Tabela de disciplinas
-            context.Subjects.AddRange(subjects);
+            context.Subject.AddRange(subjects);
 
             // Salvar as alterações feitas
             context.SaveChanges();

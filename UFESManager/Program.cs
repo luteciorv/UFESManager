@@ -13,7 +13,7 @@ namespace UFESManager
     {
         private static UFESManagerContext _context;
         private static DepartmentService _departmentService;
-        private static StudentService _studentService;        
+        private static StudentService _studentService;
 
         static async Task Main(string[] args)
         {
@@ -24,42 +24,163 @@ namespace UFESManager
                 _departmentService = new DepartmentService(_context);
                 _studentService = new StudentService(_context);
 
+                bool looping = true;
+
+                Console.WriteLine("===== UFES MANAGER 1.0v =====");
+
                 // Ciclo do programa
-                while (true)
+                while (looping)
                 {
-                    Console.Write("Escolha uma seção " +
-                        "\n1 - Adicionar um Estudante " +
-                        "\n2 - Exibir todos os estudantes " +
-                        "\n3 - Pegar todos os departamentos " +
-                        "\n4 - Encerrar aplicação \nDigite aqui: ");
+                    Console.Write("\nEscolha uma seção " +
+                        "\n1 - Departamentos" +
+                        "\n2 - Cursos" +
+                        "\n3 - Estudantes" +
+                        "\n4 - Disciplinas" +
+                        "\n5 - Encerrar aplicação " +
+                        "\n\nDigite aqui: ");
+
+                    // Resposta captada
                     int answer = int.Parse(Console.ReadLine());
 
-                    if (answer == 1)
+                    // Caso a resposta seja igual ao
+                    switch (answer)
                     {
-                        await AddUser();
-                    }
+                        /*
+                        // Departamentos
+                        case 1:
+                            {
+                                await DepartmentsAsync();
+                                break;
+                            }
 
-                    else if(answer == 2)
-                    {
-                        DisplayAllStudents();
-                    }
+                        // Cursos
+                        case 2:
+                            {
+                                Courses();
+                                break;
+                            }
+                        */
+                        // Estudantes
+                        case 3:
+                            {
+                                await StudentsAsync();
+                                break;
+                            }
+                        /*
+                    // Disciplinas
+                    case 4:
+                        {
+                            Subjects();
+                            break;
+                        }
+                    */
+                        // Encerrar
+                        case 5:
+                            {
+                                looping = false;
+                                break;
+                            }
 
-                    else if (answer == 3)
-                    {
-                        await GetAllDepartmentsAsync();
-                    }
 
-                    else if (answer == 4)
-                    {
-                        break;
+                        default:
+                            {
+                                break;
+                            }
                     }
                 }
             }
         }
 
-        private static async Task AddUser()
+        #region Departamentos        
+        private static async Task GetAllDepartmentsAsync()
         {
-            Console.WriteLine("-- Digite as informações do novo estudante --");
+            // Pegar todos os departamentos
+            List<Department> departments = await _departmentService.GetAllDepartmentsAsync();
+
+            Console.WriteLine("\n-- Exibir todos os departamentos --");
+
+            Console.WriteLine("----------------------------");
+
+            foreach (Department department in departments)
+            {
+                Console.WriteLine(department);
+
+                Console.WriteLine("----------------------------");
+            }
+        }
+        #endregion
+
+        #region Cursos
+
+        #endregion
+
+        #region Estudantes
+        private static async Task StudentsAsync()
+        {
+            bool looping = true;
+            while (looping)
+            {
+                Console.Write("\nEscolha uma ação " +
+                       "\n1 - Adicionar novo estudante" +
+                       "\n2 - Remover estudante" +
+                       "\n3 - Exibir um estudante" +
+                       "\n4 - Exibir todos os estudantes" +
+                       "\n5 - Voltar" +
+                       "\n\nDigite aqui: ");
+
+                // Resposta captada
+                int answer = int.Parse(Console.ReadLine());
+
+                // Caso a resposta seja igual ao
+                switch (answer)
+                {
+                    // Adicionar um estudante
+                    case 1:
+                        {
+                            await AddStudent();
+                            break;
+                        }
+
+                    // Remover um estudante
+                    case 2:
+                        {
+                            await RemoveStudent();
+                            break;
+                        }
+
+                    // Exibir um estudante
+                    case 3:
+                        {
+                            DisplayStudent();
+                            break;
+                        }
+
+                    // Exibir todos os estudantes
+                    case 4:
+                        {
+                            _studentService.DisplayAllStudents();
+                            break;
+                        }
+
+                    // Disciplinas
+                    case 5:
+                        {
+                            looping = false;
+                            break;
+                        }
+
+
+                    default:
+                        {
+                            break;
+                        }
+                }
+            }
+        }
+
+        private static async Task AddStudent()
+        {
+            Console.WriteLine("\n-- Digite as informações do novo estudante --");
 
             // Id
             Console.Write("Id: ");
@@ -85,42 +206,47 @@ namespace UFESManager
             Console.Write("Id das disciplinas (Separados por vírgula. Ex: 101, 254, 112) \nDigite aqui: ");
             string[] stringIds = Console.ReadLine().Split(',');
             List<int> subjectsIds = new List<int>();
-            foreach(string currentId in stringIds)
+            foreach (string currentId in stringIds)
             {
                 subjectsIds.Add(int.Parse(currentId));
             }
 
             // Pegar o curso do estudante
-            Course studentCourse = _context.Courses.Where(c => c.CourseId == courseId).FirstOrDefault();
+            Course studentCourse = _context.Course.Where(c => c.CourseId == courseId).FirstOrDefault();
             Student newStudent = new Student(id, name, email, phone, studentCourse);
 
             // Adicionar as disicplinas
-            List<Subject> studentSubjects = _context.Subjects.Where(s => subjectsIds.Contains(s.SubjectId)).ToList();
+            List<Subject> studentSubjects = _context.Subject.Where(s => subjectsIds.Contains(s.SubjectId)).ToList();
             newStudent.AddSubject(studentSubjects);
 
             await _studentService.AddStudentAsync(newStudent);
         }
 
-        private static void DisplayAllStudents()
+        private static async Task RemoveStudent()
         {
-            _studentService.DisplayAllStudents();
+            Console.WriteLine("-- REMOVER ESTUDANTE --");
+
+            // Id
+            Console.Write("Digite o Id do estudante: ");
+            int id = int.Parse(Console.ReadLine());
+
+            await _studentService.RemoveStudentAsync(id);
         }
 
-        private static async Task GetAllDepartmentsAsync()
+        private static void DisplayStudent()
         {
-            // Pegar todos os departamentos
-            List<Department> departments = await _departmentService.GetAllDepartmentsAsync();
+            Console.WriteLine("-- Digite as informações do estudante --");
 
-            Console.WriteLine("\n-- Exibir todos os departamentos --");
+            // Id
+            Console.Write("Id: ");
+            int id = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("----------------------------");
-
-            foreach (Department department in departments)
-            {
-                Console.WriteLine(department);
-
-                Console.WriteLine("----------------------------");
-            }
+            _studentService.DisplatStudent(id);
         }
+        #endregion
+
+        #region Disciplinas
+
+        #endregion
     }
 }

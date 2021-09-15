@@ -14,9 +14,9 @@ namespace UFESManager.Data
         public UFESManagerContext() : base("UFES Manager") { }
         
         // Tabelas
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Department> Department { get; set; }
+        public DbSet<Course> Course { get; set; }
+        public DbSet<Student> Student { get; set; }
+        public DbSet<Subject> Subject { get; set; }
     }
 }
