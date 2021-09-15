@@ -1,0 +1,14 @@
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\bin\Debug\UFESManager.exe.config
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\bin\Debug\UFESManager.exe
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\bin\Debug\UFESManager.pdb
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\bin\Debug\EntityFramework.dll
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\bin\Debug\EntityFramework.xml
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.csproj.AssemblyReference.cache
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.csproj.CoreCompileInputs.cache
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.csproj.CopyComplete
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.exe
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.pdb
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Initial.resources
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.csproj.GenerateResource.cache
