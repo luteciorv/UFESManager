@@ -20,13 +20,18 @@ namespace UFESManager
             // Instanciar o context do banco de dados
             using (_context = new UFESManagerContext())
             {
+                // Alocar os serviços
                 _departmentService = new DepartmentService(_context);
                 _studentService = new StudentService(_context);
 
                 // Ciclo do programa
                 while (true)
                 {
-                    Console.Write("Escolha: \n1 - Adicionar um Estudante \n2 - Exibir todos os estudantes \n3 - Pegar todos os departamentos \n4 - Encerrar aplicação \nDigite aqui: ");
+                    Console.Write("Escolha uma seção " +
+                        "\n1 - Adicionar um Estudante " +
+                        "\n2 - Exibir todos os estudantes " +
+                        "\n3 - Pegar todos os departamentos " +
+                        "\n4 - Encerrar aplicação \nDigite aqui: ");
                     int answer = int.Parse(Console.ReadLine());
 
                     if (answer == 1)

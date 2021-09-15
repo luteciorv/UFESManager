@@ -72,14 +72,20 @@ namespace UFESManager.Models
         // Exibir informações
         public override string ToString()
         {
-            List<Subject> subjects = Subjects.ToList();
+            string subjects = "\n";
+
+            foreach(Subject currentSubject in Subjects)
+            {
+                subjects += currentSubject + "\n";
+            }
+
             return $"Identificação do estudante: {StudentId} \n" +
                 $"Nome: {Name} \n" +
                 $"Email: {Email} \n" +
                 $"Telefone: {Phone} \n" +
                 $"Id do curso: {CourseId} \n" +
                 $"Nome do curso: {Course.Name} \n" +
-                $"Matérias: {Subjects.ToList().Select(s => s.ToString())}";
+                $"Matérias: {subjects}";
         }
     }
 }
