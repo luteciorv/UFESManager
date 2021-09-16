@@ -7,13 +7,13 @@ namespace UFESManager.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class UFESManagerContext_NamesCorrection : IMigrationMetadata
+    public sealed partial class BackToNormal : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UFESManagerContext_NamesCorrection));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(BackToNormal));
         
         string IMigrationMetadata.Id
         {
-            get { return "202109152105432_UFESManagerContext_NamesCorrection"; }
+            get { return "202109161821468_BackToNormal"; }
         }
         
         string IMigrationMetadata.Source

@@ -19,3 +19,4 @@ C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migr
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Student_StudentId_TurnOffGenerate1.resources
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Student_StudentId_RemoveGeneratedNone.resources
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.NormalVersion.resources
+C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.BackToNormal.resources

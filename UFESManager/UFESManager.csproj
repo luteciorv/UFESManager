@@ -86,6 +86,10 @@
     <Compile Include="Migrations\202109152122035_NormalVersion.designer.cs">
       <DependentUpon>202109152122035_NormalVersion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109161821468_BackToNormal.cs" />
+    <Compile Include="Migrations\202109161821468_BackToNormal.designer.cs">
+      <DependentUpon>202109161821468_BackToNormal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Department.cs" />
@@ -125,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109152122035_NormalVersion.resx">
       <DependentUpon>202109152122035_NormalVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109161821468_BackToNormal.resx">
+      <DependentUpon>202109161821468_BackToNormal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
