@@ -62,14 +62,6 @@
     <Compile Include="Migrations\202109152047012_Student_StudentId_TurnOffGenerateOption.designer.cs">
       <DependentUpon>202109152047012_Student_StudentId_TurnOffGenerateOption.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109152102206_Test.cs" />
-    <Compile Include="Migrations\202109152102206_Test.designer.cs">
-      <DependentUpon>202109152102206_Test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202109152105432_UFESManagerContext_NamesCorrection.cs" />
-    <Compile Include="Migrations\202109152105432_UFESManagerContext_NamesCorrection.designer.cs">
-      <DependentUpon>202109152105432_UFESManagerContext_NamesCorrection.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202109152110545_Student_StudentId_Remove.cs" />
     <Compile Include="Migrations\202109152110545_Student_StudentId_Remove.designer.cs">
       <DependentUpon>202109152110545_Student_StudentId_Remove.cs</DependentUpon>
@@ -81,10 +73,6 @@
     <Compile Include="Migrations\202109152118292_Student_StudentId_RemoveGeneratedNone.cs" />
     <Compile Include="Migrations\202109152118292_Student_StudentId_RemoveGeneratedNone.designer.cs">
       <DependentUpon>202109152118292_Student_StudentId_RemoveGeneratedNone.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202109152122035_NormalVersion.cs" />
-    <Compile Include="Migrations\202109152122035_NormalVersion.designer.cs">
-      <DependentUpon>202109152122035_NormalVersion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202109161821468_BackToNormal.cs" />
     <Compile Include="Migrations\202109161821468_BackToNormal.designer.cs">
@@ -112,12 +100,6 @@
     <EmbeddedResource Include="Migrations\202109152047012_Student_StudentId_TurnOffGenerateOption.resx">
       <DependentUpon>202109152047012_Student_StudentId_TurnOffGenerateOption.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109152102206_Test.resx">
-      <DependentUpon>202109152102206_Test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109152105432_UFESManagerContext_NamesCorrection.resx">
-      <DependentUpon>202109152105432_UFESManagerContext_NamesCorrection.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109152110545_Student_StudentId_Remove.resx">
       <DependentUpon>202109152110545_Student_StudentId_Remove.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,9 +108,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109152118292_Student_StudentId_RemoveGeneratedNone.resx">
       <DependentUpon>202109152118292_Student_StudentId_RemoveGeneratedNone.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109152122035_NormalVersion.resx">
-      <DependentUpon>202109152122035_NormalVersion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109161821468_BackToNormal.resx">
       <DependentUpon>202109161821468_BackToNormal.cs</DependentUpon>
