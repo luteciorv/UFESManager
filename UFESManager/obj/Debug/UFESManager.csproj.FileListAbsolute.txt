@@ -13,10 +13,7 @@ C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.pdb
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Initial.resources
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.csproj.GenerateResource.cache
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Student_StudentId_TurnOffGenerateOption.resources
-C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Test.resources
-C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.UFESManagerContext_NamesCorrection.resources
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Student_StudentId_Remove.resources
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Student_StudentId_TurnOffGenerate1.resources
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.Student_StudentId_RemoveGeneratedNone.resources
-C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.NormalVersion.resources
 C:\Users\luis\Documents\Codes\UFESManager\UFESManager\obj\Debug\UFESManager.Migrations.BackToNormal.resources
